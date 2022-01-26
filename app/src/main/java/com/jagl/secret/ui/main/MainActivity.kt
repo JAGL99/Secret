@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        /////Coment
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
