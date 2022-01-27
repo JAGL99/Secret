@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /////Coment
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun doRequestPopularMovies(isLocationGranted: Boolean) {
         lifecycleScope.launch{
-            val apiKey = getString(R.string.api_key)
+            val apiKey = getString(R.string.movieDbKey)
             val region = getRegion(isLocationGranted)
             val popularMovies = MovieDbClient.service.listPopularMovies(apiKey, region)
             moviesAdapter.movies = popularMovies.results
